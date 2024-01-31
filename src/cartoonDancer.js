@@ -19,11 +19,16 @@ CartoonDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-CartoonDancer.prototype.lineUp = function() {
-  var leftPosition = 10;
+// CartoonDancer.prototype.lineUp = function() {
+//   var leftPosition = 10;
 
-  $('.cartoon').each(function(index) {
-    $(this).animate({ top: '50%', left: leftPosition }, 500);
-    leftPosition += 150;
-  });
+//   $('.cartoon').each(function(index) {
+//     $(this).animate({ top: '50%', left: leftPosition }, 500);
+//     leftPosition += 150;
+//   });
+// };
+
+CartoonDancer.prototype.lineUp = function() {
+  var topPosition = 100 + 50 * window.dancers.indexOf(this);
+  this.setPosition(topPosition, 0);
 };

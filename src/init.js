@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   window.dancers = [];
 
@@ -65,18 +66,12 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
-
-  $('.LineUp').on('click', function(event) {
+  $('.LineUpButton').on('click', function(event) {
     window.dancers.forEach(function(dancer) {
-      if (dancer instanceof CartoonDancer) {
-        dancer.lineUp();
-      }
+      dancer.lineUp();
     });
-    // dancer.$node.lineUp();
-    // for (var i = 0; i < windows.dancers.length; i++) {
-    // windows.dancers[i].lineUp();
-    // };
   });
+
 
 });
 

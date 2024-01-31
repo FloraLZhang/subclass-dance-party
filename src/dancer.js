@@ -18,7 +18,10 @@ Dancer.prototype.setPosition = function(top, left) {
 };
 
 
-
+Dancer.prototype.lineUp = function() {
+  var topPosition = this.$node.position().top; // Keep the current top position
+  this.setPosition(topPosition, 0); // Line up at the left side of the screen
+};
 
 
 // // Creates and returns a new dancer object that can step
